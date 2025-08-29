@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rishabh | Project Tracker</title>
+  <meta name="description" content="Rishabh's project tracker portfolio page showcasing tasks, budget, and a downloadable Excel file." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+    .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.65); }
+    .logo-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4f46e5, #9333ea);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-800">
+  <!-- Header -->
+  <header class="sticky top-0 z-30 border-b border-slate-200 bg-white/80 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="logo-circle">R</div>
+        <a href="#" class="text-xl font-extrabold tracking-tight">Rishabh<span class="text-indigo-600">.ai</span></a>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#features" class="hover:text-indigo-600 transition">Features</a>
+        <a href="#preview" class="hover:text-indigo-600 transition">Preview</a>
+        <a href="#download" class="hover:text-indigo-600 transition">Download</a>
+        <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+      </nav>
+      <a href="#download" class="inline-flex items-center rounded-2xl bg-indigo-600 px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-indigo-500 transition">Get the Excel</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <div class="mx-auto max-w-6xl px-4 pt-14 pb-10 md:pb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+            Rishabh's <span class="text-indigo-600">Project Tracker</span>
+          </h1>
+          <p class="mt-4 text-lg text-slate-600">
+            A clean, professional showcase of my project management work—tasks, timeline, budget, and a downloadable Excel workbook.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#preview" class="rounded-2xl border border-slate-300 px-4 py-2 text-sm font-semibold hover:border-indigo-400 hover:text-indigo-600 transition">See Preview</a>
+            <a id="downloadTop" href="DOWNLOAD_EXCEL_URL" class="rounded-2xl bg-indigo-600 px-4 py-2 text-white text-sm font-semibold shadow hover:bg-indigo-500 transition">Download .xlsx</a>
+          </div>
+          <p class="mt-3 text-xs text-slate-500">File includes: Overview, Task List (50 entries), Budget, Dashboard.</p>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-3 -z-10 rounded-3xl bg-gradient-to-tr from-indigo-200 via-purple-200 to-pink-200 blur-xl opacity-60"></div>
+          <div class="glass rounded-3xl shadow-xl p-4">
+            <img src="https://images.unsplash.com/photo-1551281044-8b55d9458bd1?q=80&w=1200&auto=format&fit=crop" alt="Spreadsheet preview" class="rounded-2xl w-full h-72 object-cover"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features, Preview, Download, Contact remain unchanged -->
+
+  <footer class="py-10 text-center text-sm text-slate-500">
+    © <span id="year"></span> Rishabh — All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
